@@ -8,8 +8,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>,
 )
-
-    export default defineConfig({
-      plugins: [react()],
-      base: '/My-HK-Trip/',
-	  })
