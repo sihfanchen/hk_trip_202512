@@ -1,10 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp, Plane, Home, Calendar, Clock, MapPin, ShoppingBag, Utensils, Zap } from 'lucide-react';
-
-// 由於這是一個純粹的展示應用，我們不需要 Firestore/Auth 邏輯，但仍需定義全局變數以符合 Canvas 環境要求。
-const __app_id = 'hk-itinerary-app';
-const __firebase_config = '{}';
-const __initial_auth_token = '';
 
 const itineraryData = [
   {
@@ -64,7 +59,7 @@ const itineraryData = [
       { time: '09:30', region: '堅尼地城', detail: '海邊與港大', notes: '海旁散步，可在 % Arabica 喝咖啡。順遊香港大學。', icon: MapPin },
       { time: '12:00', region: '中上環', detail: '傳奇老店午餐', notes: '選擇：九記牛腩、勝香園 (大排檔)、沾仔記 (雲吞麵)。建議 12:00 前抵達避開人潮。', icon: Utensils },
       { time: '14:00', region: '中環', detail: '歷史與時尚交錯', notes: '參觀前警署古蹟 大館。走過石板街，搭乘半山手扶梯。', icon: MapPin },
-      { time: '16:30', region: '中環', detail: '太平山纜車', notes: '必備： 事先購買纜車+凌霄閣套票+搶靠右座位。', icon: MapPin },
+      { time: '16:30', region: '中環', detail: '太平山纜車', notes: '必備： 事先購買纜車+凌霄閣套票。', icon: MapPin },
       { time: '17:30', region: '太平山頂', detail: '觀賞日落與夜景', notes: '搶凌霄閣摩天台最佳觀景點，觀賞日景→黃昏→夜景的變化。', icon: Zap },
       { time: '19:30', region: '下山', detail: '纜車或巴士/小巴', notes: '若纜車排隊太久，可改搭 15 號巴士或 1 號小巴下山。', icon: MapPin },
     ],
@@ -78,8 +73,6 @@ const itineraryData = [
       { time: '09:00', region: '旺角', detail: '最後衝刺與 Check-out', notes: '在飯店附近購買伴手禮和藥品。退房。', icon: ShoppingBag },
       { time: '09:30', region: '香港站', detail: '市區預辦登機', notes: '核心： 刷卡進站後，先到國泰櫃檯託運行李、領登機證。', icon: Plane },
       { time: '10:00', region: '中環/灣仔', detail: '兩手空空漫遊', notes: '在中環海濱或灣仔的利東街、金紫荊廣場做最後巡禮。找一家茶餐廳享用早午餐。', icon: MapPin },
-      { time: '13:00', region: '香港站', detail: '搭乘機場快線', notes: '搭車時間。 車程僅 24 分鐘。', icon: Plane },
-      { time: '13:15', region: '香港站', detail: '搭乘機場快線', notes: '搭車時間。 車程僅 24 分鐘。', icon: Plane },
       { time: '13:30', region: '香港站', detail: '搭乘機場快線', notes: '最晚搭車時間。 車程僅 24 分鐘。', icon: Plane },
       { time: '14:00', region: '香港機場', detail: '機場免稅店/貴賓室', notes: '過安檢、出境。逛迪士尼商店、化妝品免稅店等。', icon: ShoppingBag },
       { time: '15:45', region: '離港', detail: 'CX472 航班起飛', notes: '結束美好的香港之旅。', icon: Plane },
@@ -253,7 +246,7 @@ const App = () => {
         </div>
 
         <footer className="mt-12 text-center text-sm text-gray-500 py-4">
-          <p>© 2025/12 香港深度遊行程 (數據靜態展示)</p>
+          <p>© 2024 香港深度遊行程 (數據靜態展示)</p>
           <p>祝您旅途愉快！</p>
         </footer>
       </div>
