@@ -26,7 +26,7 @@ interface DayItinerary {
   day: number;
   date: string;
   title: string;
-  summary: string; // 新增：顯示在折疊狀態的小標題/摘要
+  summary: string; // 顯示在折疊狀態的小標題/摘要
   events: TripEvent[];
 }
 
@@ -91,17 +91,16 @@ const HongKongItinerary: React.FC = () => {
       day: 3,
       date: "12/15 (一)",
       title: "中上環美食、香氛與太平山",
-      summary: "澳牛早餐 • 堅尼地城步行至上環 • 兆成行 • 太平山夜景",
+      summary: "澳牛早餐 • 堅尼地城步行至上環 • 兆成行 • 聖若瑟徑",
       events: [
         { time: "08:00", location: "澳洲牛奶公司", activity: "經典早餐體驗", type: "food", note: "體驗光速餐點服務與炒蛋多士。建議早到。" },
-        // 修改：精確定位在籃球場，步行至上環
-        { time: "09:30", location: "堅尼地城", activity: "海邊散步 (籃球場) & 經香港大學步行", type: "sight", note: "步行路線：籃球場 → 香港大學 → 上環。路徑順暢且省交通費。", mapQuery: "堅尼地城籃球場" },
-        // 修改：兆成行移到午餐前
+        { time: "09:30", location: "堅尼地城", activity: "海邊散步 (籃球場) & 經香港大學步行", type: "sight", note: "步行路線：籃球場 → 香港大學 → 上環。路徑順暢且省車費。", mapQuery: "堅尼地城籃球場" },
         { time: "11:00", location: "上環兆成行", activity: "購買知名香薰油", type: "shopping", note: "步行抵達蘇杭街。建議停留 30-40 分鐘。", mapQuery: "上環兆成行" },
-        // 修改：午餐地點在中環/上環銜接處，並排除牛肉
         { time: "12:00", location: "中環", activity: "午餐：一樂燒鵝 或 沾仔記", type: "food", note: "不吃牛首選：米其林一星燒鵝 或 鮮蝦雲吞麵。也可選勝香園 (蕃茄豬扒麵)。" },
-        { time: "13:30", location: "大館", activity: "古蹟與時尚", type: "sight", note: "參觀前警署古蹟，走過石板街、半山手扶梯。" },
-        { time: "16:30", location: "花園道纜車站", activity: "前往太平山", type: "transport", note: "步行或 15C 巴士。必備：纜車+凌霄閣套票。" },
+        { time: "13:30", location: "大館", activity: "古蹟與時尚", type: "sight", note: "參觀前警署古蹟，走過石板街、半山手扶梯。（建議停留至 15:30）" },
+        // 新增景點：聖若瑟徑
+        { time: "15:30", location: "聖若瑟徑/聖若瑟書院", activity: "港片名校場景巡禮", type: "sight", note: "從大館步行約 10-15 分鐘可達。主要在門口及外圍參觀，請保持安靜。", mapQuery: "聖若瑟徑" },
+        { time: "16:30", location: "花園道纜車站", activity: "前往太平山", type: "transport", note: "從聖若瑟徑步行約 10 分鐘到纜車站。必備：纜車+凌霄閣套票。" },
         { time: "17:30", location: "太平山頂凌霄閣", activity: "百萬夜景 (日落→夜景)", type: "sight", note: "摩天台最佳觀景點，風大請帶外套。" },
         { time: "19:30", location: "中環", activity: "下山 & 晚餐", type: "transport", note: "若纜車人多可改搭 15 號巴士或 1 號小巴。" }
       ]
@@ -130,7 +129,9 @@ const HongKongItinerary: React.FC = () => {
         { time: "09:00", location: "旺角", activity: "最後衝刺 & Check-out", type: "shopping", note: "超市買伴手禮。退房。" },
         { time: "09:30", location: "香港站", activity: "市區預辦登機 (重要)", type: "transport", note: "刷機場快線票進站→託運行李→領登機證。" },
         { time: "10:00", location: "中環海濱活動空間", activity: "兩手空空漫遊", type: "sight", note: "金紫荊廣場、摩天輪周邊。找茶餐廳享用早午餐。" },
-        { time: "13:30", location: "香港站", activity: "搭乘機場快線", type: "transport", note: "最晚搭車時間 (車程 24 分鐘)。" },
+        // 新增：13:00 最佳搭車時間
+        { time: "13:00", location: "香港站", activity: "搭乘機場快線 (最佳時間)", type: "transport", note: "建議此時搭車，確保有充裕時間辦理出境手續。" },
+        { time: "13:30", location: "香港站", activity: "搭乘機場快線 (最晚時間)", type: "transport", note: "最晚搭車時間 (車程 24 分鐘)，請勿遲到。" },
         { time: "14:00", location: "香港國際機場", activity: "安檢 & 免稅店", type: "shopping", note: "逛迪士尼商店、最後採買。" },
         { time: "15:45", location: "香港國際機場", activity: "CX472 航班起飛", type: "arrival", note: "平安回家。" }
       ]
