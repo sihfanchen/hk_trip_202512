@@ -91,25 +91,26 @@ const HongKongItinerary: React.FC = () => {
       day: 3,
       date: "12/15 (一)",
       title: "中上環美食、香氛與太平山",
-      summary: "澳牛早餐 • 堅尼地城 • 兆成行香氛 • 太平山夜景",
+      summary: "澳牛早餐 • 堅尼地城步行至上環 • 兆成行 • 太平山夜景",
       events: [
         { time: "08:00", location: "澳洲牛奶公司", activity: "經典早餐體驗", type: "food", note: "體驗光速餐點服務與炒蛋多士。建議早到。" },
-        // 修改：加入 mapQuery 定位到籃球場
-        { time: "09:30", location: "堅尼地城", activity: "海邊散步 & 港大", type: "sight", note: "% Arabica 咖啡打卡位。熱門拍照點：堅尼地城籃球場。", mapQuery: "堅尼地城籃球場" },
-        // 修改：午餐改為不吃牛的推薦選項
-        { time: "12:00", location: "中環", activity: "一樂燒鵝 或 沾仔記", type: "food", note: "不吃牛首選：米其林一星燒鵝 或 鮮蝦雲吞麵。也可選勝香園 (蕃茄豬扒麵)。" },
-        { time: "13:30", location: "上環兆成行", activity: "購買知名香薰油", type: "shopping", note: "舒淇推薦，位於蘇杭街。建議停留 30-40 分鐘。", mapQuery: "上環兆成行" },
-        { time: "14:15", location: "大館", activity: "古蹟與時尚", type: "sight", note: "參觀前警署古蹟，走過石板街、半山手扶梯。" },
+        // 修改：精確定位在籃球場，步行至上環
+        { time: "09:30", location: "堅尼地城", activity: "海邊散步 (籃球場) & 經香港大學步行", type: "sight", note: "步行路線：籃球場 → 香港大學 → 上環。路徑順暢且省交通費。", mapQuery: "堅尼地城籃球場" },
+        // 修改：兆成行移到午餐前
+        { time: "11:00", location: "上環兆成行", activity: "購買知名香薰油", type: "shopping", note: "步行抵達蘇杭街。建議停留 30-40 分鐘。", mapQuery: "上環兆成行" },
+        // 修改：午餐地點在中環/上環銜接處，並排除牛肉
+        { time: "12:00", location: "中環", activity: "午餐：一樂燒鵝 或 沾仔記", type: "food", note: "不吃牛首選：米其林一星燒鵝 或 鮮蝦雲吞麵。也可選勝香園 (蕃茄豬扒麵)。" },
+        { time: "13:30", location: "大館", activity: "古蹟與時尚", type: "sight", note: "參觀前警署古蹟，走過石板街、半山手扶梯。" },
         { time: "16:30", location: "花園道纜車站", activity: "前往太平山", type: "transport", note: "步行或 15C 巴士。必備：纜車+凌霄閣套票。" },
         { time: "17:30", location: "太平山頂凌霄閣", activity: "百萬夜景 (日落→夜景)", type: "sight", note: "摩天台最佳觀景點，風大請帶外套。" },
-        { time: "19:30", location: "中環", activity: "下山 & 晚餐", type: "transport", note: "若纜車人多可搭 15 號巴士或 1 號小巴。" }
+        { time: "19:30", location: "中環", activity: "下山 & 晚餐", type: "transport", note: "若纜車人多可改搭 15 號巴士或 1 號小巴。" }
       ]
     },
     {
       day: 4,
       date: "12/16 (二)",
       title: "港島東慢遊與燒臘朝聖",
-      summary: "怪獸大廈 • 叮叮車體驗 • 銅鑼灣 • 灣仔老區",
+      summary: "怪獸大廈 • 叮叮車體驗 • 銅鑼灣 • 灣仔燒臘大餐",
       events: [
         { time: "08:30", location: "益昌大廈", activity: "怪獸大廈打卡", type: "sight", note: "太古站 B 出口。仰拍密集建築，請保持安靜。" },
         { time: "09:30", location: "英皇道", activity: "叮叮車體驗", type: "transport", note: "往「西行」方向，坐上層第一排至北角。" },
@@ -117,7 +118,7 @@ const HongKongItinerary: React.FC = () => {
         { time: "12:00", location: "銅鑼灣", activity: "午餐與購物", type: "food", note: "何洪記粥麵、榮記粉麵。逛 SOGO、時代廣場。" },
         { time: "14:30", location: "灣仔藍屋", activity: "老區歷史與文創", type: "sight", note: "藍屋建築群、太原街玩具街、利東街。" },
         { time: "17:00", location: "甘牌燒鵝", activity: "燒臘大餐 (平日制霸)", type: "food", note: "或選再興燒臘。建議避開尖峰時段。" },
-        { time: "19:00", location: "灣仔碼頭", activity: "天星小輪回尖沙咀", type: "transport", note: "欣賞維港夜景，最便宜的觀光遊船。" }
+        { time: "19:00", location: "灣仔碼頭", activity: "天星小輪回尖沙咀", type: "transport", note: "欣賞華燈初上，最便宜的觀光遊船。" }
       ]
     },
     {
@@ -150,7 +151,7 @@ const HongKongItinerary: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto bg-gray-50 min-h-screen shadow-xl font-sans text-gray-800 flex flex-col">
-      {/* Header */}
+      {/* Header (標頭) */}
       <div className="bg-red-700 text-white p-6 rounded-b-3xl shadow-lg relative overflow-hidden z-10">
         <div className="absolute top-0 right-0 opacity-10 transform translate-x-4 -translate-y-4">
           <Plane size={120} />
@@ -172,7 +173,7 @@ const HongKongItinerary: React.FC = () => {
         </div>
       </div>
 
-      {/* Accordion Content */}
+      {/* Accordion Content (折疊式行程內容) */}
       <div className="flex-1 p-4 pb-8 overflow-y-auto space-y-4 mt-2">
         {itinerary.map((item, index) => (
           <div 
@@ -181,7 +182,7 @@ const HongKongItinerary: React.FC = () => {
               expandedDay === index ? 'border-red-200 ring-2 ring-red-50' : 'border-gray-100'
             }`}
           >
-            {/* Day Header (Clickable) */}
+            {/* Day Header (可點擊的日標題) */}
             <button
               onClick={() => toggleDay(index)}
               className="w-full text-left"
@@ -209,7 +210,7 @@ const HongKongItinerary: React.FC = () => {
               </div>
             </button>
 
-            {/* Expanded Timeline Content */}
+            {/* Expanded Timeline Content (展開的時間軸) */}
             {expandedDay === index && (
               <div className="bg-gray-50 p-4 border-t border-gray-100">
                 <div className="relative border-l-2 border-gray-200 ml-2 space-y-6 my-2">
@@ -263,7 +264,7 @@ const HongKongItinerary: React.FC = () => {
         ))}
       </div>
       
-      {/* Footer */}
+      {/* Footer (頁腳) */}
       <div className="p-4 bg-white border-t border-gray-100 text-center text-xs text-gray-400">
         <p>祝旅途愉快！ Have a nice trip.</p>
       </div>
