@@ -49,8 +49,8 @@ const HongKongItinerary: React.FC = () => {
     dates: "2024/12/13 - 12/17",
     hotel: "旺角安達賓館 (新興大廈)",
     flights: {
-      outbound: "CX461 (TPE 12:25 → HKG 14:15)",
-      inbound: "CX472 (HKG 15:45 → TPE 17:35)"
+      outbound: "CX461 (TPE T1 12:25 → HKG T1 14:15)",
+      inbound: "CX472 (HKG T1 15:45 → TPE T1 17:35)"
     }
   };
 
@@ -61,8 +61,8 @@ const HongKongItinerary: React.FC = () => {
       title: "抵港、九龍迎賓與維港夜色",
       summary: "機場接機 • 旺角安頓 • 維港燈光秀 • 廟街宵夜",
       events: [
-        { time: "08:00", location: "台中/桃園機場", activity: "搭乘高鐵至桃園機場", type: "transport", note: "提前 3 小時抵達機場，時間充裕。" },
-        { time: "14:15", location: "香港國際機場", activity: "抵達、入境、領行李", type: "arrival", note: "準備：在機場快線櫃檯購買或確認八達通卡。" },
+        { time: "08:00", location: "台中/桃園機場 (T1)", activity: "搭乘高鐵至桃園機場", type: "transport", note: "國泰航空位於「第一航廈」。建議提前 3 小時抵達機場。" },
+        { time: "14:15", location: "香港國際機場 (T1)", activity: "抵達、入境、領行李", type: "arrival", note: "準備：在機場快線櫃檯購買或確認八達通卡。" },
         { time: "15:30", location: "機場地面運輸中心", activity: "搭乘城巴 A21 (約 HKD 34.6)", type: "transport", note: "車程約 60-75 分鐘。下車點：「旺角中心」或「銀行中心」。" },
         { time: "16:30", location: "旺角安達賓館", activity: "Check-in", type: "hotel", note: "新興大廈週末電梯等待時間可能較長，請保持耐心。" },
         { time: "17:30", location: "尖沙咀", activity: "晚餐 & 準備看秀", type: "food", note: "地鐵至尖沙咀站。晚餐：海港城附近或蘭芳園（重慶大廈）。" },
@@ -132,7 +132,7 @@ const HongKongItinerary: React.FC = () => {
         // 新增：13:00 最佳搭車時間
         { time: "13:00", location: "香港站", activity: "搭乘機場快線 (最佳時間)", type: "transport", note: "建議此時搭車，確保有充裕時間辦理出境手續。" },
         { time: "13:30", location: "香港站", activity: "搭乘機場快線 (最晚時間)", type: "transport", note: "最晚搭車時間 (車程 24 分鐘)，請勿遲到。" },
-        { time: "14:00", location: "香港國際機場", activity: "安檢 & 免稅店", type: "shopping", note: "逛迪士尼商店、最後採買。" },
+        { time: "14:00", location: "香港國際機場 (T1)", activity: "安檢 & 免稅店", type: "shopping", note: "國泰航空位於「第一航廈」。逛迪士尼商店、最後採買。" },
         { time: "15:45", location: "香港國際機場", activity: "CX472 航班起飛", type: "arrival", note: "平安回家。" }
       ]
     }
